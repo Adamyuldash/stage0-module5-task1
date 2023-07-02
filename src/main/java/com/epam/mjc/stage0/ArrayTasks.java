@@ -11,7 +11,7 @@ public class ArrayTasks {
      * Return a String[] array that will list all the seasons of the year, starting with winter.
      */
     public String[] seasonsArray() {
-
+        return new String[]{"Winter","Spring","Summer","Autumn"};
     }
 
     /**
@@ -25,7 +25,11 @@ public class ArrayTasks {
      * length = 5  -> [1, 2, 3, 4, 5]
      */
     public int[] generateNumbers(int length) {
-
+        int[] arr = new int[length];
+        for (int i = 0; i < length ; i++) {
+             arr[i] = i+1;
+        }
+        return arr;
     }
 
     /**
@@ -37,8 +41,13 @@ public class ArrayTasks {
      * arr = [5, -3, -4] -> sum = -2
      */
     public int totalSum(int[] arr) {
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += i + arr[i];
+        }
+        return sum;
 
-    }
+}
 
     /**
      * Return the index of the first occurrence of number in the arr array.
@@ -51,6 +60,7 @@ public class ArrayTasks {
      */
     public int findIndexOfNumber(int[] arr, int number) {
 
+        return 0;
     }
 
     /**
@@ -64,7 +74,9 @@ public class ArrayTasks {
      */
     public String[] reverseArray(String[] arr) {
 
+        return null;
     }
+
 
     /**
      * Return new int[] array obtained from arr int[] array
@@ -79,6 +91,7 @@ public class ArrayTasks {
      */
     public int[] getOnlyPositiveNumbers(int[] arr) {
 
+        return null;
     }
 
     /**
@@ -93,5 +106,6 @@ public class ArrayTasks {
      */
     public int[][] sortRaggedArray(int[][] arr) {
 
+        return null;
     }
 }
