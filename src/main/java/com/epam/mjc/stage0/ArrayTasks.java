@@ -1,5 +1,7 @@
 package com.epam.mjc.stage0;
 
+import java.util.Arrays;
+
 /**
  * Here are the tasks for working with the arrays.
  * <p>
@@ -42,7 +44,7 @@ public class ArrayTasks {
      */
     public int totalSum(int[] arr) {
         int sum = 0;
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 1; i <arr.length; i++) {
             sum += i + arr[i];
         }
         return sum;
@@ -59,8 +61,15 @@ public class ArrayTasks {
      * arr = [5, -3, -4],   number = 10    ->  -1
      */
     public int findIndexOfNumber(int[] arr, int number) {
+        int n = arr.length;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] == number) {
+                return i;
+            }
+        }
+        return -1;
 
-        return 0;
+
     }
 
     /**
@@ -73,13 +82,18 @@ public class ArrayTasks {
      * arr = ["pineapple", "apple", "pen"] -> ["pen", "apple", "pineapple"]
      */
     public String[] reverseArray(String[] arr) {
+        int n = arr.length;
+        String[] reversedArr = new String[n];
+        for (int i = 0; i < n; i++) {
+            reversedArr[i] = arr[n - 1 - i];
+        }
 
-        return null;
+        return reversedArr;
     }
 
 
     /**
-     * Return new int[] array obtained from arr int[] array
+     * Return new int[] an array obtained from arr int[] an array
      * by choosing positive numbers only.
      * P.S. 0 is not a positive number =)
      * <p>
@@ -90,8 +104,16 @@ public class ArrayTasks {
      * arr = [1, 2]         -> [1, 2]
      */
     public int[] getOnlyPositiveNumbers(int[] arr) {
+        int n = arr.length;
+        int[] positiveNumbers = new int[n];
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] > 0) {
+                positiveNumbers[count++] = arr[i];
+            }
+        }
+        return positiveNumbers;
 
-        return null;
     }
 
     /**
