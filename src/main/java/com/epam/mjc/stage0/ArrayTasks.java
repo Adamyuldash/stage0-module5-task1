@@ -104,12 +104,13 @@ public class ArrayTasks {
      * arr = [1, 2]         -> [1, 2]
      */
     public int[] getOnlyPositiveNumbers(int[] arr) {
-        int n = arr.length;
-        int[] positiveNumbers = new int[n];
-        int count = 0;
-        for (int i = 0; i < n; i++) {
+        int[] positiveNumbers = new int[0];
+        for (int i = 0; i < arr.length; i++) {
             if (arr[i] > 0) {
-                positiveNumbers[count++] = arr[i];
+                int[] temp = new int[positiveNumbers.length + 1];
+                System.arraycopy(positiveNumbers, 0, temp, 0, positiveNumbers.length);
+                temp[positiveNumbers.length] = arr[i];
+                positiveNumbers = temp;
             }
         }
         return positiveNumbers;
